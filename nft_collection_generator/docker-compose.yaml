@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  webapp:
+    container_name: nft-visor
+    restart: always
+    image: nft-visor
+    ports:
+      - "5001:80"
+    build:
+      context: ./
+    volumes:
+      - /var/run/nft_visor:/var/run/nft_visor
